@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<h2>Customer Feedback Form</h2>
+
+<form>
+
+Name:
+<input type="text" id="name" 
+onkeypress="validateName(event)" 
+onmouseover="highlight(this)" 
+onmouseout="removeHighlight(this)">
+<br><br>
+
+Email:
+<input type="text" id="email"
+onkeypress="validateEmail(event)"
+onmouseover="highlight(this)" 
+onmouseout="removeHighlight(this)">
+<br><br>
+
+Feedback:
+<textarea id="feedback"
+onmouseover="highlight(this)" 
+onmouseout="removeHighlight(this)">
+</textarea>
+
+<br><br>
+
+<button type="button" ondblclick="submitForm()">
+Submit Feedback
+</button>
+
+</form>
+
+</body>
+</html>

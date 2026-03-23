@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;spring.java_based_bean_config&apos;&#x0D;&#x0A;- Original project: &apos;spring.java_based_bean_config&apos;&#x0D;&#x0A;- Original element: &apos;com.vir.b30.spring.java_based_bean_config.LinkedList.java&apos;" description="Delete element" element1="/spring.java_based_bean_config\/src\/main\/java&lt;com.vir.b30.spring.java_based_bean_config{LinkedList.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1771563718203" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Simulation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .account-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        
+        .account-info p {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .account-info strong {
+            color: #28a745;
+            font-size: 18px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        .note {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .balance {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💳 Payment Simulation System</h1>
+        
+        <div class="account-info">
+            <h3>💰 Account Balances:</h3>
+            <p>User Account: <strong>$5000</strong></p>
+            <p>Merchant Account: <strong>$1000</strong></p>
+        </div>
+        
+        <form action="processPayment" method="post">
+            <div class="form-group">
+                <label for="amount">Amount to Transfer ($):</label>
+                <input type="number" id="amount" name="amount" min="0.01" step="0.01" required placeholder="Enter amount">
+            </div>
+            
+            <div class="form-group">
+                <label for="fromAccount">From Account:</label>
+                <select id="fromAccount" name="fromAccount" required>
+                    <option value="">Select source account</option>
+                    <option value="UserAccount">User Account</option>
+                    <option value="MerchantAccount">Merchant Account</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="toAccount">To Account:</label>
+                <select id="toAccount" name="toAccount" required>
+                    <option value="">Select destination account</option>
+                    <option value="UserAccount">User Account</option>
+                    <option value="MerchantAccount">Merchant Account</option>
+                </select>
+            </div>
+            
+            <button type="submit">Process Payment</button>
+        </form>
+        
+        <div class="info-box">
+            <h3>📋 Transaction Features:</h3>
+            <p>✓ Atomic transactions (COMMIT on success)</p>
+            <p>✓ Automatic ROLLBACK on failure</p>
+            <p>✓ Balance validation before transfer</p>
+            <p>✓ Real-time balance updates</p>
+        </div>
+        
+        <div class="note">
+            <p>Note: This simulates real banking transactions with ACID properties</p>
+        </div>
+    </div>
+</body>
+</html>
